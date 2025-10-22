@@ -1,0 +1,10 @@
+einops==0.4.0
+matplotlib==3.8.0
+numpy==1.24.3
+pandas==2.0.3
+ptflops==0.7.3
+pytorch_wavelets==1.3.0
+scikit-learn==1.2.2
+scipy==1.11.4
+torch==2.3.0
+
