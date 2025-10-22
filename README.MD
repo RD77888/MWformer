@@ -2,6 +2,8 @@
 
 This is the code implementation of “MWformer: A Multi-scale Wavelet-enhanced Transformer for Runoff Forecasting”
 
+***The paper has not yet been published***
+
 ## Repository Directory
 
 ```
