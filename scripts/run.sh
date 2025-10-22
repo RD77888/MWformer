@@ -2,16 +2,16 @@
 set -euo pipefail
 export CUDA_VISIBLE_DEVICES=0
 model_name="model name" # specify your model name here
-task_id="task name " # specify your task id here
-data_name="data file" #specify your data file here
-target="forecasting target" # specify your forecasting target here
-wavelet_name="db4" # specify your wavelet name here
-seq_len=96 # specify your sequence length here
-pred_len=24 # specify your prediction length here
-patch_num=24 # specify your patch number here
+task_id="task name "
+data_name="data file"
+target="forecasting target"
+wavelet_name="db4"
+seq_len=96
+pred_len=24
+patch_num=24
 num_rain=6
 num_runoff=6
-loss="MTL" # specify your loss type here
+loss="MTL"
 CHECKPOINT_PATH="./checkpoints/${model_name}_taskid${task_id}_sl${seq_len}_pl${pred_len}_itr0_${loss}/checkpoint.pth"
 ARGS_JSON_PATH="./args_setting/${model_name}_args.json"
 GPU_ID=0
