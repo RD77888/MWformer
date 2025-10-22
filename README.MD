@@ -4,46 +4,43 @@ This is the code implementation of “MWformer: A Multi-scale Wavelet-enhanced T
 
 ## Repository Directory
 
+```
 MWformer/
-│  eval.py
-│  README.MD
-│  run.py
+├── LICENSE
+├── eval.py
+├── README.md
+├── run.py
+├── data/
+│   ├── data.md
+│   └── data_provider/
+│       ├── data_factory.py
+│       └── data_loader.py
+├── exp/
+│   ├── exp.py
+│   ├── exp_basic.py
+│   
+├── layers/
+│   ├── Attn.py
+│   ├── DualAttn.py
+│   ├── DWT.py
+│   ├── Patch.py
+│   ├── Pred.py
+│   ├── RMSnorm.py
+│   └── ROPE.py
+├── model/
+│   └── MWformer.py
+├── scripts/
+│   └── run.sh
+└── utils/
+    ├── HydrologicalScaler.py
+    ├── loss.py
+    ├── metrics.py
+    ├── print_args.py
+    ├── timefeatures.py
+    └── tools.py
+```
 
-│  LICENSE
-├─data
-│      data.MD
-│
-├─data_provider
-│  │  data_factory.py
-│  │  data_loader.py
-│ 
-├─exp
-│  │  exp.py
-│  │  exp_basic.py
-│  │  __init__.py
-│ 
-├─layers
-│      Attn.py
-│      DualAttn.py
-│      DWT.py
-│      Patch.py
-│      Pred.py
-│      RMSnorm.py
-│      ROPE.py
-│
-├─model
-│      MWformer.py
-│
-├─scripts
-│      run.sh
-│
-└─utils
-    │  HydrologicalScaler.py
-    │  loss.py
-    │  metrics.py
-    │  print_args.py
-    │  timefeatures.py
-    │  tools.py
+
 
 ### Repository  Notes
 
