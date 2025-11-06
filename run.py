@@ -31,8 +31,10 @@ def main():
                         help='model name')
 
     # Data Loader
+    parser.add_argument('--set_type', type=str, default='HybridScaler', help='dataset type')
     parser.add_argument('--root_path', type=str, default='./data/', help='root path of the data file')
     parser.add_argument('--data_path', type=str, default='data.csv', help='data file')
+    parser.add_argument('--target', type=str, default='OT', help='target feature ')
     parser.add_argument('--freq', type=str, default='h', help='freq for time features encoding')
     parser.add_argument('--checkpoints', type=str, default='./checkpoints/', help='location of model checkpoints')
     parser.add_argument('--scheduler', type=str, default='reduce_on_plateau', help='set scheduler type, options: [reduce_on_plateau, onecycle]')
@@ -61,6 +63,7 @@ def main():
     parser.add_argument('--loss', type=str, default='MTL', help='train use criterion, options: [L1, L2, MTL]')
 
     # Optimization
+    parser.add_argument('--delta', type=float, default=0.01, help='delta for huber loss')
     parser.add_argument('--num_workers', type=int, default=4, help='data loader num workers')
     parser.add_argument('--itr', type=int, default=1, help='experiments times')
     parser.add_argument('--train_epochs', type=int, default=10, help='train epochs')

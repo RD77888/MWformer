@@ -19,7 +19,6 @@ class Model(nn.Module):
         self.batch_size = configs.batch_size
         self.n_heads = configs.n_heads
         self.d_ff=configs.d_ff
-        self.activation = configs.activation
         self.e_layers = configs.e_layers
         self.patch_num = configs.patch_num
         self.dropout = configs.dropout

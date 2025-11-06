@@ -13,7 +13,7 @@ def acquire_device():
     return device
 
 def data_provider(args, flag):
-    Data = data_dict[args.data]
+    Data = data_dict[args.set_type]
     timeenc = 0 if args.embed != 'timeF' else 1
 
     if flag == 'test' or flag == 'val':

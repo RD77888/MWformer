@@ -1,10 +1,10 @@
 #!/bin/bash
 set -euo pipefail
 export CUDA_VISIBLE_DEVICES=0
-model_name="model name" # specify your model name here
-task_id="task name "
-data_name="data file"
-target="forecasting target"
+model_name=MWformer
+task_id="predict"
+data_name="data.csv"
+target="zhutuo_Q"
 wavelet_name="db4"
 seq_len=96
 pred_len=24
@@ -24,9 +24,8 @@ python -u run.py \
   --root_path  data\
   --data_path $data_name\
   --model $model_name \
-  --patience 50\
-  --train_epochs 200\
-  --data new \
+  --patience 200\
+  --train_epochs 20\
   --target $target\
   --seq_len $seq_len \
   --pred_len $pred_len\
@@ -41,6 +40,7 @@ python -u run.py \
   --delta 0.002 \
   --scheduler 'cosine_warm_restarts' \
   --dropout 0.2 \
+  --batch_size 256 \
   --itr 1
 
 python -u eval.py \
